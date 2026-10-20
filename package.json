@@ -42,7 +42,6 @@
     "test": "yarn lint && yarn unittest",
     "typecheck": "tsc --noEmit",
     "lint": "yarn eslint .",
-    "prepare": "yarn bob build",
     "type:check": "yarn tsc --noEmit",
     "fetch:style:spec": ". ./scripts/download-style-spec.sh",
     "generate": "node ./scripts/autogenerate.mjs",
@@ -54,7 +53,6 @@
     "build:plugin": "yarn tsc --build plugin",
     "build:examples.json": "cd example; jest __tests__/dumpExamplesJson.ts",
     "lint:plugin": "yarn eslint plugin/src/*",
-    "build": "yarn bob build",
     "build:copy-plugin": "npx tsx plugin/copy-plugin.ts"
   },
   "keywords": [
@@ -66,7 +64,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rnmapbox/maps"
+    "url": "git+https://github.com/layered-tech/maps.git"
   },
   "author": "React Native Mapbox Team (rnmapbox@gmail.com)",
   "license": "MIT",
