@@ -302,6 +302,10 @@ public class RNMBXLayer : UIView, RNMBXMapComponent, RNMBXSourceConsumer {
       Logger.log(level:.warn, message: "RNMBXLayer.removeFromMap - unmetPositionDependency: layer: \(optional: id) was waiting for layer: \(optional: waitingForID) but it hasn't added to map")
     }
 
+    guard styleLayerExists(style, id: self.id) else {
+      return
+    }
+
     do {
       try style.removeLayer(withId: self.id)
     } catch {
